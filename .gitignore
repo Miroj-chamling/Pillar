@@ -1,0 +1,7 @@
+# Editor / OS files (backend/ and frontend/ have their own .gitignore for build output)
+.idea/
+.vscode/
+*.iml
+.DS_Store
+*.log
+.env

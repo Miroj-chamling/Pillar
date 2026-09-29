@@ -1,0 +1,15 @@
+# Local Postgres for development. Start with: docker compose up -d
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: finance
+      POSTGRES_USER: finance
+      POSTGRES_PASSWORD: finance
+    ports:
+      - "5433:5432"   # 5433 on your machine -> 5432 in the container (your local PG already uses 5432)
+    volumes:
+      - pgdata:/var/lib/postgresql
+
+volumes:
+  pgdata:
